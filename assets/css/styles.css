@@ -1,0 +1,6 @@
+/* line 3, ../sass/styles.scss */
+#services ul {
+  list-style: circle;
+  width: 60%;
+  margin: auto;
+}

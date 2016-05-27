@@ -198,10 +198,11 @@
 				text-align: center;
 				top: 1em;
 				width: 100%;
+				color: #000;
 
 				&:before {
 					font-size: 3.5em;
-					opacity: 0.35;
+					opacity: 0.55;
 				}
 			}
 		}
@@ -299,6 +300,7 @@
 		&.featured {
 			display: block;
 			margin: 0 0 2em 0;
+			color: #000;
 
 			img {
 				display: block;
@@ -381,8 +383,9 @@
 			cursor: default;
 			display: block;
 			margin: 0 0 1.5em 0;
-			opacity: 0.35;
+			opacity: 0.75;
 			text-align: center;
+			color: #000;
 
 			&:before {
 				font-size: 5em;
@@ -530,8 +533,8 @@
 		@include vendor('appearance', 'none');
 		@include vendor('transition', ('color 0.2s ease-in-out', 'border-color 0.2s ease-in-out', 'background-color 0.2s ease-in-out'));
 		background: none;
-		border: solid 1px;
-		color: inherit;
+		border: solid 2px;
+		color: #000;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
@@ -551,7 +554,7 @@
 
 		&.special {
 			background: _palette(one, bg);
-			border-color: _palette(one, bg);
+			//border-color: _palette(one, bg);
 			color: _palette(one, fg) !important;
 
 			&:hover {
@@ -595,6 +598,7 @@
 				}
 
 				&.special {
+
 					background: _palette(one, fg);
 					border-color: _palette(one, fg);
 					color: _palette(one, bg) !important;
@@ -800,11 +804,10 @@
 
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: _palette(three, bg);
-		background-image: url('images/light-bl.svg'), url('images/light-br.svg'), url('images/overlay.png'), url('../../images/banner.jpg');
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+		background-size: cover;
+		background-image: url('../../images/300.jpg');
 		color: _palette(banner, fg);
 		cursor: default;
 		padding: 6em 0;
@@ -813,7 +816,7 @@
 		.inner {
 			@include vendor('animation', 'reveal-banner 1s 0.25s ease-in-out');
 			@include vendor('animation-fill-mode', 'forwards');
-			background: transparentize(_palette(banner, inner-bg), 0.5);
+			background: rgba(255, 255, 255, 0.5);
 			color: _palette(banner, inner-fg);
 			display: inline-block;
 			opacity: 0;
@@ -1098,9 +1101,7 @@
 
 		/* Banner */
 
-			#banner {
-				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
-			}
+
 
 		/* Main */
 
@@ -1512,7 +1513,7 @@
 		/* Banner */
 
 			#banner {
-				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+
 				padding: 6em 0;
 
 				.inner {
