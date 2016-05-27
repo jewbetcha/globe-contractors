@@ -1147,7 +1147,7 @@
 		/* CTA */
 
 			#cta {
-				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+				//background-size: $pattern-background-size, $pattern-background-size, auto, cover;
 				padding: 3em;
 			}
 
@@ -1490,6 +1490,7 @@
 			.button {
 				max-width: 20em;
 				width: 100%;
+				min-width: 0;
 
 				&.fit {
 					width: auto;
@@ -1546,15 +1547,21 @@
 			}
 
 		/* Banner */
-
+			#cta {
+				.inner {
+					display: block;
+					padding: 1em 1.5em;
+					margin: 0 1em;
+				}
+			}
 			#banner {
 
 				padding: 6em 0;
 
 				.inner {
-					background: none;
 					display: block;
-					padding: 0 1.5em;
+					padding: 1em 1.5em;
+					margin: 0 1em;
 
 					header {
 						h2 {
@@ -1590,7 +1597,7 @@
 		/* CTA */
 
 			#cta {
-				background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+				//background-size: $pattern-background-size, $pattern-background-size, auto, cover;
 				padding: 3em 1.5em;
 			}
 

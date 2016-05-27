@@ -3002,7 +3002,6 @@ body.index #main {
   /* CTA */
   /* line 1149, ../sass/main.scss */
   #cta {
-    background-size: 15em, 15em, auto, cover;
     padding: 3em;
   }
 }
@@ -3383,8 +3382,9 @@ body.index #main {
   .button {
     max-width: 20em;
     width: 100%;
+    min-width: 0;
   }
-  /* line 1494, ../sass/main.scss */
+  /* line 1495, ../sass/main.scss */
   input[type="button"].fit,
   input[type="submit"].fit,
   input[type="reset"].fit,
@@ -3393,98 +3393,104 @@ body.index #main {
   }
 
   /* List */
-  /* line 1503, ../sass/main.scss */
+  /* line 1504, ../sass/main.scss */
   ul.icons li {
     padding-left: 0.25em;
   }
-  /* line 1510, ../sass/main.scss */
+  /* line 1511, ../sass/main.scss */
   ul.featured-icons li .icon {
     width: 1.1em;
   }
-  /* line 1516, ../sass/main.scss */
+  /* line 1517, ../sass/main.scss */
   ul.buttons {
     text-align: center;
   }
 
   /* Wrapper */
-  /* line 1523, ../sass/main.scss */
+  /* line 1524, ../sass/main.scss */
   .wrapper {
     margin-bottom: 2.5em;
     padding: 2.25em 1.5em;
   }
-  /* line 1528, ../sass/main.scss */
+  /* line 1529, ../sass/main.scss */
   .wrapper.special br {
     display: none;
   }
-  /* line 1533, ../sass/main.scss */
+  /* line 1534, ../sass/main.scss */
   .wrapper.style1 {
     padding: 0 1.5em;
   }
-  /* line 1537, ../sass/main.scss */
+  /* line 1538, ../sass/main.scss */
   .wrapper.style2 {
     background-size: 10em;
     padding: 2.25em 1.5em;
   }
-  /* line 1542, ../sass/main.scss */
+  /* line 1543, ../sass/main.scss */
   .wrapper.style4 {
     background-size: 10em;
     padding: 1.5em 1.5em 3em 1.5em;
   }
 
   /* Banner */
-  /* line 1550, ../sass/main.scss */
+  /* line 1551, ../sass/main.scss */
+  #cta .inner {
+    display: block;
+    padding: 1em 1.5em;
+    margin: 0 1em;
+  }
+
+  /* line 1557, ../sass/main.scss */
   #banner {
     padding: 6em 0;
   }
-  /* line 1554, ../sass/main.scss */
+  /* line 1561, ../sass/main.scss */
   #banner .inner {
-    background: none;
     display: block;
-    padding: 0 1.5em;
+    padding: 1em 1.5em;
+    margin: 0 1em;
   }
-  /* line 1560, ../sass/main.scss */
+  /* line 1567, ../sass/main.scss */
   #banner .inner header h2 {
     font-size: 1.5em;
   }
-  /* line 1565, ../sass/main.scss */
+  /* line 1572, ../sass/main.scss */
   #banner .inner p {
     text-align: center;
   }
-  /* line 1569, ../sass/main.scss */
+  /* line 1576, ../sass/main.scss */
   #banner .inner br {
     display: none;
   }
 
   /* Main */
-  /* line 1577, ../sass/main.scss */
+  /* line 1584, ../sass/main.scss */
   #main {
     background-size: 10em;
     padding: 3.5em 0 2.5em 0;
   }
 
-  /* line 1582, ../sass/main.scss */
+  /* line 1589, ../sass/main.scss */
   body.index #main {
     padding: 2.5em 0 0 0;
   }
 
-  /* line 1586, ../sass/main.scss */
+  /* line 1593, ../sass/main.scss */
   body.contact #main {
     padding-bottom: 0;
   }
 
   /* CTA */
-  /* line 1592, ../sass/main.scss */
+  /* line 1599, ../sass/main.scss */
   #cta {
-    background-size: 10em, 10em, auto, cover;
     padding: 3em 1.5em;
   }
 
   /* Footer */
-  /* line 1599, ../sass/main.scss */
+  /* line 1606, ../sass/main.scss */
   #footer {
     padding: 3em 1.5em;
   }
-  /* line 1603, ../sass/main.scss */
+  /* line 1610, ../sass/main.scss */
   #footer .copyright li {
     display: block;
     margin: 1em 0 0 0;
@@ -3493,7 +3499,7 @@ body.index #main {
   }
 
   /* Off-Canvas Navigation */
-  /* line 1616, ../sass/main.scss */
+  /* line 1623, ../sass/main.scss */
   #navButton .toggle:before {
     top: 8px;
     left: 8px;
@@ -3501,7 +3507,7 @@ body.index #main {
     height: 34px;
     line-height: 34px;
   }
-  /* line 1624, ../sass/main.scss */
+  /* line 1631, ../sass/main.scss */
   #navButton .toggle:after {
     top: 8px;
     left: 8px;
