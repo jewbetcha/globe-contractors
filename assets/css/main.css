@@ -2680,7 +2680,7 @@ input[type="reset"].small,
   background-position: bottom left, bottom right, top left, top center;
   background-repeat: no-repeat, no-repeat, repeat, no-repeat;
   background-size: cover;
-  background-image: url("../../images/300.jpg");
+  background-image: url("../../images/300.JPG");
   color: #fff;
   cursor: default;
   padding: 6em 0;
@@ -2775,7 +2775,7 @@ body.index #main {
 /* line 898, ../sass/main.scss */
 #cta {
   background-attachment: scroll, scroll, scroll, fixed;
-  background-image: url("../../images/197.jpg");
+  background-image: url("../../images/197.JPG");
   background-position: 50%;
   background-repeat: no-repeat, no-repeat, repeat, no-repeat;
   background-size: cover;
