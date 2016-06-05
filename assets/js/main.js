@@ -95,13 +95,13 @@
 		// If the header is using "alt" styling and #banner is present, use scrollwatch
 		// to revert it back to normal styling once the user scrolls past the banner.
 		// Note: This is disabled on mobile devices.
+		var $header = $('#header');
 			if (!skel.vars.mobile
-			&&	$header.hasClass('alt')
-			&&	$banner.length > 0) {
+			&&	$header.hasClass('alt')) {
 
 				$window.on('load', function() {
 
-					$banner.scrollwatch({
+					$('.top').scrollwatch({
 						delay:		0,
 						range:		1,
 						anchor:		'top',
