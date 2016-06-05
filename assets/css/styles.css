@@ -8,3 +8,8 @@
   width: 60%;
   margin: auto;
 }
+
+/* line 12, ../sass/styles.scss */
+#header.alt.not-front {
+  color: #031927;
+}
