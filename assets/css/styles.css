@@ -1,24 +1,35 @@
 /* line 2, ../sass/styles.scss */
+#dozer {
+  width: 100px;
+  margin-top: -50px;
+}
+
+/* line 6, ../sass/styles.scss */
+#bm-front {
+  width: 80px;
+}
+
+/* line 9, ../sass/styles.scss */
 #services {
   padding-top: 60px;
 }
-/* line 5, ../sass/styles.scss */
+/* line 12, ../sass/styles.scss */
 #services ul {
   list-style: circle;
   width: 60%;
   margin: auto;
 }
 
-/* line 12, ../sass/styles.scss */
+/* line 19, ../sass/styles.scss */
 #header.alt.not-front {
   color: #031927;
 }
 
-/* line 18, ../sass/styles.scss */
+/* line 25, ../sass/styles.scss */
 .contact header p {
   margin-bottom: 0;
 }
-/* line 21, ../sass/styles.scss */
+/* line 28, ../sass/styles.scss */
 .contact header h4 {
   text-decoration: underline;
   margin-top: 1em;
