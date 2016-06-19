@@ -13,3 +13,13 @@
 #header.alt.not-front {
   color: #031927;
 }
+
+/* line 18, ../sass/styles.scss */
+.contact header p {
+  margin-bottom: 0;
+}
+/* line 21, ../sass/styles.scss */
+.contact header h4 {
+  text-decoration: underline;
+  margin-top: 1em;
+}

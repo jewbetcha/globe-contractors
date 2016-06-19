@@ -12,3 +12,15 @@
 #header.alt.not-front {
   color: #031927;
 }
+
+.contact {
+  header {
+    p {
+      margin-bottom: 0;
+    }
+    h4 {
+      text-decoration: underline;
+      margin-top: 1em;
+    }
+  }
+}
