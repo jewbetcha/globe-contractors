@@ -34,3 +34,16 @@
   text-decoration: underline;
   margin-top: 1em;
 }
+
+/* line 36, ../sass/styles.scss */
+.boremaster header.special:before, .boremaster header.special:after {
+  width: 35%;
+}
+/* line 40, ../sass/styles.scss */
+.boremaster header h2 {
+  margin-top: 100px;
+}
+/* line 44, ../sass/styles.scss */
+.boremaster #bm {
+  width: 125px;
+}

@@ -31,3 +31,17 @@
     }
   }
 }
+.boremaster {
+  header {
+    &.special:before,
+    &.special:after {
+      width: 35%;
+    }
+    h2 {
+      margin-top: 100px;
+    }
+  }
+  #bm {
+    width: 125px;
+  }
+}
