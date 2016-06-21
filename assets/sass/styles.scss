@@ -1,0 +1,62 @@
+// Overrides for the template.
+#dozer {
+  width: 100px;
+  margin-top: -50px;
+}
+#bm-front {
+  width: 80px;
+}
+#services {
+  padding-top: 60px;
+
+  ul {
+    list-style: circle;
+    width: 60%;
+    margin: auto;
+  }
+}
+
+#header.alt.not-front {
+  color: #031927;
+}
+
+// Contact page
+.contact {
+  header {
+    p {
+      margin-bottom: 0;
+    }
+    h4 {
+      text-decoration: underline;
+      margin-top: 1em;
+    }
+  }
+}
+
+// Boremaster page
+.boremaster {
+  header {
+    &.special:before,
+    &.special:after {
+      width: 35%;
+    }
+    h2 {
+      margin-top: 100px;
+    }
+  }
+  #bm {
+    width: 125px;
+  }
+}
+
+// History page
+.history {
+  .unslider {
+    height: 520px;
+    overflow: hidden;
+
+    img {
+      max-height: 480px;
+    }
+  }
+}
