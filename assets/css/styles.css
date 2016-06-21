@@ -25,25 +25,35 @@
   color: #031927;
 }
 
-/* line 25, ../sass/styles.scss */
+/* line 26, ../sass/styles.scss */
 .contact header p {
   margin-bottom: 0;
 }
-/* line 28, ../sass/styles.scss */
+/* line 29, ../sass/styles.scss */
 .contact header h4 {
   text-decoration: underline;
   margin-top: 1em;
 }
 
-/* line 36, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
 .boremaster header.special:before, .boremaster header.special:after {
   width: 35%;
 }
-/* line 40, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 .boremaster header h2 {
   margin-top: 100px;
 }
-/* line 44, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 .boremaster #bm {
   width: 125px;
+}
+
+/* line 54, ../sass/styles.scss */
+.history .unslider {
+  height: 520px;
+  overflow: hidden;
+}
+/* line 58, ../sass/styles.scss */
+.history .unslider img {
+  max-height: 480px;
 }

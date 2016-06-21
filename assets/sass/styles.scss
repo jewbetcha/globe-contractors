@@ -20,6 +20,7 @@
   color: #031927;
 }
 
+// Contact page
 .contact {
   header {
     p {
@@ -31,6 +32,8 @@
     }
   }
 }
+
+// Boremaster page
 .boremaster {
   header {
     &.special:before,
@@ -43,5 +46,17 @@
   }
   #bm {
     width: 125px;
+  }
+}
+
+// History page
+.history {
+  .unslider {
+    height: 520px;
+    overflow: hidden;
+
+    img {
+      max-height: 480px;
+    }
   }
 }
