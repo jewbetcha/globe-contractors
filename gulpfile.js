@@ -1,5 +1,7 @@
 'use strict';
 
+// Not actually using this anymore, but will keep anyway
+
 var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssmin = require('gulp-minify-css'),
