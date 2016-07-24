@@ -794,11 +794,11 @@
 	}
 
 	#banner {
-		background-attachment: scroll, scroll, scroll, fixed;
-		background-position: bottom left, bottom right, top left, top center;
-		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+		//background-attachment: scroll, scroll, scroll, fixed;
+		background-position: 50%;
+		background-repeat: no-repeat;
 		background-size: cover;
-		background-image: url('../../images/300.JPG');
+		background-image: url('../../images/IMG_2615.JPG');
 		color: _palette(banner, fg);
 		cursor: default;
 		padding: 6em 0;
@@ -1563,6 +1563,7 @@
 					display: block;
 					padding: 1em 1.5em;
 					margin: 0 1em;
+					max-width: 100% !important;
 
 					header {
 						h2 {
