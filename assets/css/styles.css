@@ -1,1 +1,68 @@
-#dozer{width:100px;margin-top:-50px}#bm-front{width:80px}#services{padding-top:60px}#services ul{list-style:circle;width:60%;margin:auto}#header.alt.not-front{color:#031927}.contact header p{margin-bottom:0}.contact header h4{text-decoration:underline;margin-top:1em}.boremaster header.special:after,.boremaster header.special:before{width:35%}.boremaster header h2{margin-top:100px}.boremaster #bm{width:125px}.history .unslider{height:520px;overflow:hidden}.history .unslider img{max-height:480px}
+#banner .inner {
+  max-width: 450px;
+}
+#banner em {
+  font-style: italic;
+  font-weight: bold;
+  color: #fff;
+}
+
+#dozer {
+  width: 100px;
+  margin-top: -50px;
+}
+
+#bm-front {
+  width: 80px;
+}
+
+#services {
+  padding-top: 60px;
+}
+#services ul {
+  list-style: circle;
+  width: 60%;
+  margin: auto;
+}
+
+#header.alt.not-front {
+  color: #031927;
+}
+
+.testimonials li {
+  margin: 20px 0;
+  text-align: left;
+}
+.testimonials li em {
+  font-style: italic;
+}
+
+#affiliations .affiliations {
+  text-align: left;
+}
+
+.contact header p {
+  margin-bottom: 0;
+}
+.contact header h4 {
+  text-decoration: underline;
+  margin-top: 1em;
+}
+
+.boremaster header.special:before, .boremaster header.special:after {
+  width: 35%;
+}
+.boremaster header h2 {
+  margin-top: 100px;
+}
+.boremaster #bm {
+  width: 125px;
+}
+
+.history .unslider {
+  height: 520px;
+  overflow: hidden;
+}
+.history .unslider img {
+  max-height: 480px;
+}

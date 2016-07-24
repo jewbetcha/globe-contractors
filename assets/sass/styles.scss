@@ -1,4 +1,14 @@
 // Overrides for the template.
+#banner {
+  .inner {
+    max-width: 450px;
+  }
+  em {
+    font-style: italic;
+    font-weight: bold;
+    color: #fff;
+  }
+}
 #dozer {
   width: 100px;
   margin-top: -50px;
@@ -20,6 +30,21 @@
   color: #031927;
 }
 
+.testimonials {
+  li {
+    margin: 20px 0;
+    text-align: left;
+
+    em {
+      font-style: italic;
+    }
+  }
+}
+#affiliations {
+  .affiliations {
+    text-align: left;
+  }
+}
 // Contact page
 .contact {
   header {

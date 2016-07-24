@@ -6,7 +6,10 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssmin = require('gulp-minify-css'),
     autoprefixer = require('gulp-autoprefixer'),
-    bb   = require('bitballoon');
+    bb   = require('bitballoon'),
+    livereload = require('gulp-livereload'),
+    compass = require('gulp-compass'),
+    path = require('path');
 
 gulp.task('build', [], function() {
   return gulp.src('./assets/css/*.css')
@@ -27,4 +30,18 @@ gulp.task('deploy', function() {
   }, function(err, deploy) {
     if (err) { throw(err) }
   });
+});
+
+gulp.task('compass', function() {
+  gulp.src('assets/sass/*.scss')
+    .pipe(compass({
+      config_file: 'assets/config.rb',
+      css: 'assets/css',
+      sass: 'assets/sass'
+    }));
+});
+
+gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch('assets/sass/*.scss', ['compass']);
 });
