@@ -41,70 +41,81 @@
 }
 
 /* line 40, ../sass/styles.scss */
+#dozer-icon {
+  width: 100px;
+  margin-top: -15px;
+}
+
+/* line 44, ../sass/styles.scss */
 #bm-front {
   width: 80px;
 }
 
-/* line 43, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 #services {
   padding-top: 60px;
 }
-/* line 46, ../sass/styles.scss */
+/* line 50, ../sass/styles.scss */
 #services ul {
   list-style: circle;
   width: 60%;
   margin: auto;
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 #header.alt.not-front {
   color: #031927;
 }
 
-/* line 58, ../sass/styles.scss */
+/* line 62, ../sass/styles.scss */
 .testimonials li {
   margin: 20px 0;
   text-align: left;
 }
-/* line 62, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 .testimonials li em {
   font-style: italic;
 }
 
-/* line 68, ../sass/styles.scss */
+/* line 72, ../sass/styles.scss */
 #affiliations .affiliations {
   text-align: left;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 .contact header p {
   margin-bottom: 0;
 }
-/* line 78, ../sass/styles.scss */
+/* line 82, ../sass/styles.scss */
 .contact header h4 {
   text-decoration: underline;
   margin-top: 1em;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 92, ../sass/styles.scss */
 .boremaster header.special:before, .boremaster header.special:after {
   width: 35%;
 }
-/* line 92, ../sass/styles.scss */
+/* line 96, ../sass/styles.scss */
 .boremaster header h2 {
   margin-top: 100px;
 }
-/* line 96, ../sass/styles.scss */
+/* line 100, ../sass/styles.scss */
 .boremaster #bm {
   width: 125px;
 }
-
 /* line 103, ../sass/styles.scss */
+.boremaster ul {
+  list-style-type: square;
+  padding-left: 15px;
+}
+
+/* line 111, ../sass/styles.scss */
 .history .unslider {
   height: 520px;
   overflow: hidden;
 }
-/* line 107, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 .history .unslider img {
   max-height: 480px;
 }
