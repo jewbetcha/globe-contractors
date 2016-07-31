@@ -1,7 +1,7 @@
 // Overrides for the template.
 @keyframes slideshow {
   0% {
-    background-image: url('../../images/IMG_2615.JPG');
+    background-image: url('../../images/IMG_2364.JPG');
   }
   20% {
     background-image: url('../../images/IMG_1612.JPG');
@@ -22,6 +22,7 @@
 
 #banner {
   animation: slideshow 15s 3s ease-in-out infinite;
+  transition: all .3s;
 
   .inner {
     max-width: 450px;
