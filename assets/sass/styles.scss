@@ -15,13 +15,16 @@
   80% {
       background-image: url('../../images/IMG_2715.JPG');
   }
-  100% {
+  95% {
     background-image: url('../../images/300.JPG');
+  }
+  100% {
+    background-image: url('../../images/IMG_2364.JPG');
   }
 }
 
 #banner {
-  animation: slideshow 15s 3s ease-in-out infinite;
+  animation: slideshow 20s 2s ease-in-out infinite;
   transition: all .3s;
 
   .inner {

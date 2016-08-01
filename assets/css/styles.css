@@ -14,108 +14,111 @@
   80% {
     background-image: url("../../images/IMG_2715.JPG");
   }
-  100% {
+  95% {
     background-image: url("../../images/300.JPG");
   }
+  100% {
+    background-image: url("../../images/IMG_2364.JPG");
+  }
 }
-/* line 23, ../sass/styles.scss */
+/* line 26, ../sass/styles.scss */
 #banner {
-  animation: slideshow 15s 3s ease-in-out infinite;
+  animation: slideshow 20s 2s ease-in-out infinite;
   transition: all .3s;
 }
-/* line 27, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 #banner .inner {
   max-width: 450px;
 }
-/* line 30, ../sass/styles.scss */
+/* line 33, ../sass/styles.scss */
 #banner em {
   font-style: italic;
   font-weight: bold;
   color: #000;
 }
 
-/* line 36, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
 #dozer {
   width: 100px;
   margin-top: -50px;
 }
 
-/* line 40, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 #dozer-icon {
   width: 100px;
   margin-top: -15px;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 #bm-front {
   width: 80px;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 50, ../sass/styles.scss */
 #services {
   padding-top: 60px;
 }
-/* line 50, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 #services ul {
   list-style: circle;
   width: 60%;
   margin: auto;
 }
 
-/* line 57, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 #header.alt.not-front {
   color: #031927;
 }
 
-/* line 62, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 .testimonials li {
   margin: 20px 0;
   text-align: left;
 }
-/* line 66, ../sass/styles.scss */
+/* line 69, ../sass/styles.scss */
 .testimonials li em {
   font-style: italic;
 }
 
-/* line 72, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 #affiliations .affiliations {
   text-align: left;
 }
 
-/* line 79, ../sass/styles.scss */
+/* line 82, ../sass/styles.scss */
 .contact header p {
   margin-bottom: 0;
 }
-/* line 82, ../sass/styles.scss */
+/* line 85, ../sass/styles.scss */
 .contact header h4 {
   text-decoration: underline;
   margin-top: 1em;
 }
 
-/* line 92, ../sass/styles.scss */
+/* line 95, ../sass/styles.scss */
 .boremaster header.special:before, .boremaster header.special:after {
   width: 35%;
 }
-/* line 96, ../sass/styles.scss */
+/* line 99, ../sass/styles.scss */
 .boremaster header h2 {
   margin-top: 100px;
 }
-/* line 100, ../sass/styles.scss */
+/* line 103, ../sass/styles.scss */
 .boremaster #bm {
   width: 125px;
 }
-/* line 103, ../sass/styles.scss */
+/* line 106, ../sass/styles.scss */
 .boremaster ul {
   list-style-type: square;
   padding-left: 15px;
 }
 
-/* line 111, ../sass/styles.scss */
+/* line 114, ../sass/styles.scss */
 .history .unslider {
   height: 520px;
   overflow: hidden;
 }
-/* line 115, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .history .unslider img {
   max-height: 480px;
 }
