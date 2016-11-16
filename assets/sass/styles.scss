@@ -1,32 +1,4 @@
 // Overrides for the template.
-// @keyframes slideshow {
-//   0% {
-//     background-image: url('../../images/IMG_2364.JPG');
-//   }
-//   20% {
-//     background-image: url('../../images/IMG_1612.JPG');
-//   }
-//   40% {
-//     background-image: url('../../images/335.JPG');
-//   }
-//   60% {
-//     background-image: url('../../images/339.JPG');
-//   }
-//   80% {
-//       background-image: url('../../images/IMG_2715.JPG');
-//   }
-//   95% {
-//     background-image: url('../../images/300.JPG');
-//   }
-//   100% {
-//     background-image: url('../../images/IMG_2364.JPG');
-//   }
-// }
-
-// @keyframes fade {
-//   0%,20% { opacity: 1; }
-//   25%,95% { opacity: 0; }
-// }
 @keyframes fade {
     0% { opacity: 0; animation-timing-function: ease-in; }
     8% { opacity: 1; animation-timing-function: ease-out; }
