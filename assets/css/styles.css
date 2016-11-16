@@ -1,124 +1,175 @@
-@keyframes slideshow {
+@keyframes fade {
   0% {
-    background-image: url("../../images/IMG_2364.JPG");
+    opacity: 0;
+    animation-timing-function: ease-in;
   }
-  20% {
-    background-image: url("../../images/IMG_1612.JPG");
+  8% {
+    opacity: 1;
+    animation-timing-function: ease-out;
   }
-  40% {
-    background-image: url("../../images/335.JPG");
+  17% {
+    opacity: 1;
   }
-  60% {
-    background-image: url("../../images/339.JPG");
-  }
-  80% {
-    background-image: url("../../images/IMG_2715.JPG");
-  }
-  95% {
-    background-image: url("../../images/300.JPG");
+  25% {
+    opacity: 0;
   }
   100% {
-    background-image: url("../../images/IMG_2364.JPG");
+    opacity: 0;
   }
 }
-/* line 26, ../sass/styles.scss */
-#banner {
-  animation: slideshow 20s 2s ease-in-out infinite;
-  transition: all .3s;
+@media screen and (max-width: 736px) {
+  /* line 38, ../sass/styles.scss */
+  #banner .slideshow {
+    height: 60% !important;
+  }
 }
-/* line 30, ../sass/styles.scss */
+/* line 44, ../sass/styles.scss */
+#banner .slideshow {
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+/* line 52, ../sass/styles.scss */
+#banner .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: fade 18s linear infinite 0s;
+}
+/* line 66, ../sass/styles.scss */
+#banner .slide:nth-child(1) {
+  animation-delay: -18s;
+  background-image: url("../../images/IMG_2364.JPG");
+}
+/* line 70, ../sass/styles.scss */
+#banner .slide:nth-child(2) {
+  animation-delay: -15s;
+  background-image: url("../../images/IMG_1612.JPG");
+}
+/* line 74, ../sass/styles.scss */
+#banner .slide:nth-child(3) {
+  animation-delay: -12s;
+  background-image: url("../../images/335.JPG");
+}
+/* line 78, ../sass/styles.scss */
+#banner .slide:nth-child(4) {
+  animation-delay: -9s;
+  background-image: url("../../images/339.JPG");
+}
+/* line 82, ../sass/styles.scss */
+#banner .slide:nth-child(5) {
+  animation-delay: -6s;
+  background-image: url("../../images/IMG_2715.JPG");
+}
+/* line 86, ../sass/styles.scss */
+#banner .slide:nth-child(6) {
+  animation-delay: -3s;
+  background-image: url("../../images/300.JPG");
+}
+/* line 91, ../sass/styles.scss */
 #banner .inner {
   max-width: 450px;
 }
-/* line 33, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 #banner em {
   font-style: italic;
   font-weight: bold;
   color: #000;
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 100, ../sass/styles.scss */
 #dozer {
   width: 100px;
   margin-top: -50px;
 }
 
-/* line 43, ../sass/styles.scss */
+/* line 104, ../sass/styles.scss */
 #dozer-icon {
   width: 100px;
   margin-top: -15px;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 108, ../sass/styles.scss */
 #bm-front {
   width: 80px;
 }
 
-/* line 50, ../sass/styles.scss */
+/* line 111, ../sass/styles.scss */
 #services {
   padding-top: 60px;
 }
-/* line 53, ../sass/styles.scss */
+/* line 114, ../sass/styles.scss */
 #services ul {
   list-style: circle;
   width: 60%;
   margin: auto;
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 #header.alt.not-front {
   color: #031927;
 }
 
-/* line 65, ../sass/styles.scss */
+/* line 126, ../sass/styles.scss */
 .testimonials li {
   margin: 20px 0;
   text-align: left;
 }
-/* line 69, ../sass/styles.scss */
+/* line 130, ../sass/styles.scss */
 .testimonials li em {
   font-style: italic;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 136, ../sass/styles.scss */
 #affiliations .affiliations {
   text-align: left;
 }
 
-/* line 82, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 .contact header p {
   margin-bottom: 0;
 }
-/* line 85, ../sass/styles.scss */
+/* line 146, ../sass/styles.scss */
 .contact header h4 {
   text-decoration: underline;
   margin-top: 1em;
 }
 
-/* line 95, ../sass/styles.scss */
+/* line 156, ../sass/styles.scss */
 .boremaster header.special:before, .boremaster header.special:after {
   width: 35%;
 }
-/* line 99, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
 .boremaster header h2 {
   margin-top: 100px;
 }
-/* line 103, ../sass/styles.scss */
+/* line 164, ../sass/styles.scss */
 .boremaster #bm {
   width: 125px;
 }
-/* line 106, ../sass/styles.scss */
+/* line 167, ../sass/styles.scss */
 .boremaster ul {
   list-style-type: square;
   padding-left: 15px;
 }
 
-/* line 114, ../sass/styles.scss */
+/* line 175, ../sass/styles.scss */
 .history .unslider {
   height: 520px;
   overflow: hidden;
 }
-/* line 118, ../sass/styles.scss */
+/* line 179, ../sass/styles.scss */
 .history .unslider img {
   max-height: 480px;
 }

@@ -2667,10 +2667,6 @@ input[type="reset"].small,
 }
 /* line 796, ../sass/main.scss */
 #banner {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../../images/IMG_2364.JPG");
   color: #fff;
   cursor: default;
   padding: 6em 0;
