@@ -11,12 +11,16 @@
       height: 60% !important;
   }
 }
-
+	@media screen and (max-width: 736px) {
+		body.index #main {
+			padding-top: 14rem;
+		}
+	}
 #banner {
   .slideshow {
     position: absolute;
     width: 100%;
-    height: 75%;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 0;
@@ -26,7 +30,7 @@
       height: 100%;
       left: 0;
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.6);
       content: '';
       z-index: 100;
     }
@@ -71,8 +75,12 @@
     }
   }
   .inner {
-    max-width: 450px;
+    max-width: 400px;
     border-radius: 4px;
+
+    img {
+      width: 150px;
+    }
   }
   em {
     font-style: italic;
