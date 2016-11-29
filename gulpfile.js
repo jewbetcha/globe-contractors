@@ -2,14 +2,14 @@
 
 // Not actually using this anymore, but will keep anyway
 
-var gulp = require('gulp'),
+var gulp   = require('gulp'),
     rename = require('gulp-rename'),
     cssmin = require('gulp-minify-css'),
     autoprefixer = require('gulp-autoprefixer'),
-    bb   = require('bitballoon'),
-    livereload = require('gulp-livereload'),
-    compass = require('gulp-compass'),
-    path = require('path');
+    livereload   = require('gulp-livereload'),
+    compass      = require('gulp-compass'),
+    imagemin     = require('gulp-imagemin'),
+    path         = require('path');
 
 gulp.task('build', [], function() {
   return gulp.src('./assets/css/*.css')
@@ -22,15 +22,6 @@ gulp.task('build', [], function() {
     //.pipe(rename('styles.min.css'));
 });
 
-gulp.task('deploy', function() {
-  bb.deploy({
-    access_token: "a35f74d49983f40f49bcc1134923dc31a652d10d78acfc1012ec2986539119b2",
-    site_id: "http://veterinarian-bear-35244.bitballoon.com/",
-    dir: "./"
-  }, function(err, deploy) {
-    if (err) { throw(err) }
-  });
-});
 
 gulp.task('compass', function() {
   gulp.src('assets/sass/*.scss')
@@ -39,6 +30,12 @@ gulp.task('compass', function() {
       css: 'assets/css',
       sass: 'assets/sass'
     }));
+});
+
+gulp.task('imagemin', function() {
+  return gulp.src('./images/*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('./images'));
 });
 
 gulp.task('watch', function() {
