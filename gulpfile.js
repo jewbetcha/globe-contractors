@@ -22,6 +22,14 @@ gulp.task('build', [], function() {
     //.pipe(rename('styles.min.css'));
 });
 
+gulp.task('prefix', function() {
+  gulp.src('assets/css/styles.css')
+      .pipe(autoprefixer({
+            browsers: ['last 3 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('assets/css/'))
+});
 
 gulp.task('compass', function() {
   gulp.src('assets/sass/*.scss')
