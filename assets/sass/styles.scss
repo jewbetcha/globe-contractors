@@ -6,11 +6,11 @@
     25% { opacity: 0 }
     100% { opacity: 0 }
 }
-	@media screen and (max-width: 736px) {
-		body.index #main {
-			padding-top: 14rem;
-		}
-	}
+@media screen and (max-width: 736px) {
+  body.index #main {
+    padding-top: 14rem;
+  }
+}
 #banner {
   .slideshow {
     position: absolute;
@@ -70,17 +70,51 @@
     }
   }
   .inner {
-    max-width: 400px;
-    border-radius: 4px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    padding: 5rem;
+    margin: auto;
 
     img {
-      width: 150px;
+      flex: 1;
+      margin-right: 60px;
     }
   }
-  em {
-    font-style: italic;
+  p {
     font-weight: bold;
-    color: #000;
+    color: #fff;
+    text-align: left;
+    font-size: 25px;
+
+    a {
+      padding: 0;
+      line-height: 3em;
+      margin: 15px 0;
+    }
+  }
+}
+@media screen and (max-width: 840px) {
+  #banner .inner {
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 0;
+
+    img {
+      margin: 10px 0;
+      margin-right: 0;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        width: 100%;
+        margin: 15px auto;
+      }
+    }
   }
 }
 #dozer {
