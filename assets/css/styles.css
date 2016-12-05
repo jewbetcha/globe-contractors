@@ -28,7 +28,7 @@
 
 #banner .inner { max-width: 900px; display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-align: center; align-items: center; background: none; padding: 5rem; margin: auto; }
 
-#banner .inner img { -ms-flex: 1; flex: 1; margin-right: 60px; }
+#banner .inner img { -ms-flex: 1; flex: 1; margin-right: 60px; width: 200px; }
 
 #banner p { font-weight: bold; color: #fff; text-align: left; font-size: 25px; }
 
