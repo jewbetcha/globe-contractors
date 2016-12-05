@@ -1,7 +1,5 @@
 'use strict';
 
-// Not actually using this anymore, but will keep anyway
-
 var gulp   = require('gulp'),
     rename = require('gulp-rename'),
     cssmin = require('gulp-minify-css'),
@@ -9,7 +7,12 @@ var gulp   = require('gulp'),
     livereload   = require('gulp-livereload'),
     compass      = require('gulp-compass'),
     imagemin     = require('gulp-imagemin'),
-    path         = require('path');
+    path         = require('path'),
+    sass         = require('gulp-sass'),
+    refresh      = require('gulp-refresh'),
+    st           = require('st'),
+    http         = require('http'),
+    server       = require('gulp-server-livereload');
 
 gulp.task('build', [], function() {
   return gulp.src('./assets/css/*.css')
@@ -46,7 +49,35 @@ gulp.task('imagemin', function() {
   .pipe(gulp.dest('./images'));
 });
 
-gulp.task('watch', function() {
-  livereload.listen();
-  gulp.watch('assets/sass/*.scss', ['compass']);
+gulp.task('sass', function () {
+  gulp.src('assets/sass/*.scss')
+   .pipe(sass({
+    outputStyle: 'compact',
+    errLogToConsole: true		             
+  }))
+  .pipe(autoprefixer({
+     browsers: ['last 3 versions'],
+     cascade: false           
+  }))
+  .pipe(gulp.dest('assets/css/'))
+  .pipe(livereload());
+});
+
+gulp.task('watch', ['webserver'], function() {
+ gulp.watch('assets/sass/*.scss', ['sass']);
+});
+
+gulp.task('server', function(done) {
+  http.createServer(
+    st({ path: __dirname, index: 'index.html', cache: false  })
+  ).listen(8080, done);
+});
+
+gulp.task('webserver', function() {
+  gulp.src('./')
+   .pipe(server({
+       livereload: true,
+       directoryListing: true,
+       open: true		        
+  }));
 });
