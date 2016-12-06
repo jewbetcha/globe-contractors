@@ -648,7 +648,7 @@
 			position: absolute;
 			right: 1.5em;
 			text-transform: uppercase;
-			top: 0.75em;
+			top: .5em;
 
 			ul {
 				li {
@@ -714,12 +714,12 @@
 			background: _palette(header, alt-bg);
 			box-shadow: none;
 			color: _palette(header, alt-fg);
-			padding: 2em 2.5em;
+			padding-top: 4.5em;
 			position: absolute;
 
 			nav {
 				right: 2.5em;
-				top: 1.75em;
+				top: 4em;
 
 				ul {
 					li {

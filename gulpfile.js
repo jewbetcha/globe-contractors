@@ -52,7 +52,7 @@ gulp.task('imagemin', function() {
 gulp.task('sass', function () {
   gulp.src('assets/sass/*.scss')
    .pipe(sass({
-    outputStyle: 'compact',
+    outputStyle: 'compressed',
     errLogToConsole: true		             
   }))
   .pipe(autoprefixer({
