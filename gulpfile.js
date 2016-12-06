@@ -63,7 +63,8 @@ gulp.task('sass', function () {
   .pipe(livereload());
 });
 
-gulp.task('watch', ['webserver'], function() {
+gulp.task('watch', ['server'], function() {
+ livereload.listen();
  gulp.watch('assets/sass/*.scss', ['sass']);
 });
 
