@@ -55,30 +55,38 @@
         background-repeat: none;
         opacity: 0;
         z-index: 0;
-        animation: fade 18s linear infinite 0s;
+        animation: fade 25s linear infinite 0s;
         &:nth-child(1) {
-            animation-delay: -18s;
+            animation-delay: -22s;
             background-image: url('../../images/IMG_2364.JPG');
         }
         &:nth-child(2) {
-            animation-delay: -15s;
+            animation-delay: -19s;
             background-image: url('../../images/IMG_1612.JPG');
         }
         &:nth-child(3) {
-            animation-delay: -12s;
-            background-image: url('../../images/335.JPG');
+            animation-delay: -16s;
+            background-image: url('../../images/IMG_2615.JPG');
         }
         &:nth-child(4) {
-            animation-delay: -9s;
+            animation-delay: -13s;
             background-image: url('../../images/339.JPG');
         }
         &:nth-child(5) {
-            animation-delay: -6s;
+            animation-delay: -10s;
             background-image: url('../../images/IMG_2715.JPG');
         }
         &:nth-child(6) {
-            animation-delay: -3s;
-            background-image: url('../../images/300.JPG');
+            animation-delay: -7s;
+            background-image: url('../../images/TosaDOT1.jpg');
+        }
+        &:nth-child(7) {
+            animation-delay: -4s;
+            background-image: url('../../images/TosaDOT2.jpg');
+        }
+        &:nth-child(8) {
+            animation-delay: -1s;
+            background-image: url('../../images/335.JPG');
         }
     }
     .inner {
@@ -253,4 +261,9 @@
             max-height: 480px;
         }
     }
+}
+
+// Contact page 
+::-webkit-input-placeholder {
+    color: #031927;
 }
