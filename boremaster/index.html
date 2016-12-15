@@ -47,7 +47,32 @@
                 <!-- Content -->
                 <div class="content">
                     <section>
-                        <a href="#" class="image featured"><img src="../images/boremaster_main.jpg" alt="" /></a>
+                        <div class="slides">
+                            <div>
+                                <img src="../images/DSC07830.JPG" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/scott013.JPG" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/115.JPG" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/IMG_1923.JPG" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/IMG_2640.JPG" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/008.JPG" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/052.JPG" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/IMG_1883.JPG" alt="">
+                            </div>
+                        </div>
                         <header>
                             <h3>Bore Master</h3>
                         </header>
@@ -152,6 +177,22 @@
     <script src="../assets/js/util.js"></script>
     <!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/siema.min.js"></script>
+    <script>
+        var slideshow = new Siema({
+            selector: '.slides',
+            duration: 500,
+            easing: 'ease-in-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            threshold: 20,
+            loop: true,
+        });
+        setInterval(function() {
+            slideshow.next()
+        }, 3000);
+    </script>
 
 </body>
 
