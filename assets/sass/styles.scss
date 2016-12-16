@@ -250,13 +250,17 @@
         list-style-type: square;
         padding-left: 15px;
     }
-    .slides {
-        margin-bottom: 20px;
-        max-height: 600px;
+    .nastt {
+        width: 150px;
+    }
+}
+
+.slides {
+    margin-bottom: 20px;
+    max-height: 600px;
+    width: 100%;
+    img {
         width: 100%;
-        img {
-            width: 100%;
-        }
     }
 }
 
@@ -274,4 +278,15 @@
 // Contact page 
 ::-webkit-input-placeholder {
     color: #031927;
+}
+
+.contact {
+    .contact-us {
+        text-transform: none;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .note {
+        margin: 10px 0;
+    }
 }
