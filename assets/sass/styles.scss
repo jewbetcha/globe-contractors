@@ -66,7 +66,7 @@
         }
         &:nth-child(3) {
             animation-delay: -16s;
-            background-image: url('../../images/IMG_2615.JPG');
+            background-image: url('../../images/somers.jpg');
         }
         &:nth-child(4) {
             animation-delay: -13s;
@@ -277,6 +277,11 @@
 
 // Contact page 
 ::-webkit-input-placeholder {
+    color: #031927;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
     color: #031927;
 }
 
