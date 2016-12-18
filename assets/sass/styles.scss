@@ -183,6 +183,11 @@
 .index {
     .header-icon {
         color: #fff;
+        z-index: 10001;
+        a {
+            color: #fff;
+            cursor: pointer;
+        }
     }
 }
 
