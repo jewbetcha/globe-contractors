@@ -194,7 +194,7 @@
 .header-icon {
     position: absolute;
     right: 0;
-    z-index: 10001;
+    z-index: 10011;
     color: #000;
     margin-top: 10px;
     margin-right: 2.5em;
@@ -216,7 +216,9 @@
 
 @media screen and (max-width: 840px) {
     .header-icon {
-        display: none;
+        span {
+            display: none;
+        }
     }
 }
 

@@ -16,7 +16,7 @@
 
 <body class="no-sidebar project">
     <div id="page-wrapper">
-        <span class="header-icon"><a href="mailto:info@globecontractors.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>info@globecontractors.com<a href="tel:262-246-0600"><i class="fa fa-phone" aria-hidden="true"></i></a>262-246-0600</span>
+        <span class="header-icon"><a href="mailto:info@globecontractors.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a><span>info@globecontractors.com</span><a href="tel:262-246-0600"><i class="fa fa-phone" aria-hidden="true"></i></a><span>262-246-0600</span></span>
 
         <!-- Header -->
         <header id="header" class="alt not-front">
@@ -48,22 +48,10 @@
                 <!-- Content -->
                 <div class="content">
                     <section>
-                        <div class="slides">
-                            <div>
-                                <img src="../../images/northwestern_mutual.png" alt="">
-                            </div>
-                            <div>
-                                <img src="../../images/Woodland_Hills.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="../../images/fox_river.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="../../images/foxriver.png" alt="">
-                            </div>
-                            <div>
-                                <img src="../../images/Cider_Hills.jpg" alt="">
-                            </div>
+                        <div class="">
+                            <ul>
+                                <li><img class="image featured" src="../../images/Woodland_Hills.jpg" alt="" /></li>
+                            </ul>
                         </div>
                         <header>
                             <h2>Belman Homes Subdivisions</h2>
@@ -74,6 +62,13 @@
                             subdivisions in Waukesha County. Globe Contractors installed the sanitary, storm, and water main systems, along with the sanitary laterals and water services to each lot. When doing work for site developers, we strive to get
                             our work done as efficiently as possible, with the best interests of the project owner in mind from start to finish.
                         </p>
+                    </section>
+                    <section>
+                        <div class="">
+                            <ul>
+                                <li><img class="image featured" src="../../images/fox_river.jpg" alt="" /></li>
+                            </ul>
+                        </div>
                         <header>
                             <h2>The Shoppes at Fox River</h2>
                             <h3>Waukesha, WI</h3>
@@ -83,6 +78,13 @@
                             1,400 LF of 6” sanitary laterals to the future store lots. Nearly 8,000 LF of 12” water main was installed along with over 1,500 LF of 6” water services. The storm sewer varied from 6” to 54” diameter and together massed over
                             10,800 LF, along with 91 total storm manholes.
                         </p>
+                    </section>
+                    <section>
+                        <div class="">
+                            <ul>
+                                <li><img class="image featured" src="../../images/northwestern_mutual.png" alt="" /></li>
+                            </ul>
+                        </div>
                         <header>
                             <h2>Northwestern Mutual Tower</h2>
                             <h3>Downtown - Milwaukee, WI</h3>
@@ -124,22 +126,6 @@
     <script src="../../assets/js/util.js"></script>
     <!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="../../assets/js/main.js"></script>
-    <script src="../../assets/js/siema.min.js"></script>
-    <script>
-        var slideshow = new Siema({
-            selector: '.slides',
-            duration: 500,
-            easing: 'ease-in-out',
-            perPage: 1,
-            startIndex: 0,
-            draggable: true,
-            threshold: 20,
-            loop: true,
-        });
-        setInterval(function() {
-            slideshow.next()
-        }, 3000);
-    </script>
 
 </body>
 
