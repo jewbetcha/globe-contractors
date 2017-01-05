@@ -98,13 +98,13 @@
         padding: 5rem;
         margin: auto;
         img {
-            flex: 1;
             margin-right: 60px;
             width: 200px;
             height: 255px;
         }
     }
     p {
+        flex: 1;
         font-weight: bold;
         color: #fff;
         text-align: left;
