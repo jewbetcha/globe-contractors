@@ -16,6 +16,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     del = require('del'),
     runSequence = require('run-sequence'),
+    htmlLint = require('gulp-html-lint'),
     uglify = require('gulp-uglify');
 
 // Package everything up for prod
@@ -36,8 +37,19 @@ gulp.task('copy', function() {
 // Minify HTML files
 gulp.task('html', function() {
 	return gulp.src('**/*.html', {base: "./"})
-	 .pipe(htmlmin({collapseWhitespace: true}))
+	 .pipe(htmlmin({
+		 collapseWhitespace: true, 
+		 ignorePath: './node_modules/'
+	 }))
 	 .pipe(gulp.dest('./build/'));
+});
+
+// Lint HTML 
+gulp.task('lint', function() {
+   return gulp.src('./**/*.html')
+     .pipe(htmlLint())
+     .pipe(htmlLint.format())
+     .pipe(htmlLint.failOnError());
 });
 
 // Prefix task by itself
