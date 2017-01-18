@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     st = require('st'),
     http = require('http'),
     server = require('gulp-server-livereload'),
-    htmlmin = require('gulp-htmlmin'),
+    htmlmin = require('gulp-html-minifier'),
     concat = require('gulp-concat'),
     del = require('del'),
     runSequence = require('run-sequence'),
@@ -20,7 +20,10 @@ var gulp = require('gulp'),
 
 // Package everything up for prod
 gulp.task('build', function() {
+	// First get rid of all the old stuff    
 	del(['./build/*']);
+
+	// Then run all the things
 	runSequence('sass', 'imagemin', 'copy', 'html');
 });
 
@@ -32,11 +35,12 @@ gulp.task('copy', function() {
 
 // Minify HTML files
 gulp.task('html', function() {
-	return gulp.src('./**/*.html', {base: "./"})
+	return gulp.src('**/*.html', {base: "./"})
 	 .pipe(htmlmin({collapseWhitespace: true}))
 	 .pipe(gulp.dest('./build/'));
 });
 
+// Prefix task by itself
 gulp.task('prefix', function() {
     gulp.src('assets/css/styles.css')
         .pipe(autoprefixer({
@@ -46,13 +50,14 @@ gulp.task('prefix', function() {
         .pipe(gulp.dest('assets/css/'))
 });
 
-
+// Minify images and move to build folder
 gulp.task('imagemin', function() {
     return gulp.src('./images/*')
         .pipe(imagemin())
 	.pipe(gulp.dest('./build/images/'));
 });
 
+// Compile styles
 gulp.task('sass', function() {
     gulp.src('assets/sass/*.scss')
         .pipe(sass({
