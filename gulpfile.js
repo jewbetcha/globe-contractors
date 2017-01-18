@@ -5,24 +5,36 @@ var gulp = require('gulp'),
     cssmin = require('gulp-minify-css'),
     autoprefixer = require('gulp-autoprefixer'),
     livereload = require('gulp-livereload'),
-    compass = require('gulp-compass'),
     imagemin = require('gulp-imagemin'),
     path = require('path'),
     sass = require('gulp-sass'),
     refresh = require('gulp-refresh'),
     st = require('st'),
     http = require('http'),
-    server = require('gulp-server-livereload');
+    server = require('gulp-server-livereload'),
+    htmlmin = require('gulp-htmlmin'),
+    concat = require('gulp-concat'),
+    del = require('del'),
+    runSequence = require('run-sequence'),
+    uglify = require('gulp-uglify');
 
-gulp.task('build', [], function() {
-    return gulp.src('./assets/css/*.css')
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
-            cascade: false
-        }))
-        .pipe(cssmin())
-        .pipe(gulp.dest('./assets/css/'));
-    //.pipe(rename('styles.min.css'));
+// Package everything up for prod
+gulp.task('build', function() {
+	del(['./build/*']);
+	runSequence('sass', 'imagemin', 'copy', 'html');
+});
+
+// Copy built assets to the build folder
+gulp.task('copy', function() {
+	return 	gulp.src('./assets/**/*', {base:"./assets"})
+		.pipe(gulp.dest('./build/assets/'))
+});
+
+// Minify HTML files
+gulp.task('html', function() {
+	return gulp.src('./**/*.html', {base: "./"})
+	 .pipe(htmlmin({collapseWhitespace: true}))
+	 .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('prefix', function() {
@@ -34,19 +46,11 @@ gulp.task('prefix', function() {
         .pipe(gulp.dest('assets/css/'))
 });
 
-gulp.task('compass', function() {
-    gulp.src('assets/sass/*.scss')
-        .pipe(compass({
-            config_file: 'assets/config.rb',
-            css: 'assets/css',
-            sass: 'assets/sass'
-        }));
-});
 
 gulp.task('imagemin', function() {
     return gulp.src('./images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./images'));
+	.pipe(gulp.dest('./build/images/'));
 });
 
 gulp.task('sass', function() {
@@ -59,9 +63,15 @@ gulp.task('sass', function() {
             browsers: ['last 3 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('assets/css/'))
-        .pipe(livereload());
+        .pipe(gulp.dest('assets/css/'));
 });
+
+// Just using to compress single files
+gulp.task('compress', function() {
+	return gulp.src('./assets/js/main.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('./assets/js/'));
+})
 
 gulp.task('watch', function() {
     //livereload.listen();
@@ -82,3 +92,4 @@ gulp.task('webserver', function() {
             open: true
         }));
 });
+
