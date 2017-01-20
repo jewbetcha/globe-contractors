@@ -36,6 +36,8 @@
     "gulp-uglify": "^2.0.0",
     "http": "0.0.0",
     "run-sequence": "^1.2.2",
+    "shipit-cli": "^2.0.0",
+    "shipit-deploy": "^2.4.0",
     "st": "^1.2.0"
   },
   "devDependencies": {
