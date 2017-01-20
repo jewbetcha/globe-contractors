@@ -36,10 +36,10 @@ gulp.task('copy', function() {
 
 // Minify HTML files
 gulp.task('html', function() {
-	return gulp.src('**/*.html', {base: "./"})
+	return gulp.src(['**/*.html', '!node_modules/**/*'], {base: "./"})
 	 .pipe(htmlmin({
 		 collapseWhitespace: true, 
-		 ignorePath: './node_modules/'
+		 ignorePath: './node_modules'
 	 }))
 	 .pipe(gulp.dest('./build/'));
 });
