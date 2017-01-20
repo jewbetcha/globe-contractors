@@ -38,8 +38,7 @@ gulp.task('copy', function() {
 gulp.task('html', function() {
 	return gulp.src(['**/*.html', '!node_modules/**/*'], {base: "./"})
 	 .pipe(htmlmin({
-		 collapseWhitespace: true, 
-		 ignorePath: './node_modules'
+		 collapseWhitespace: true 
 	 }))
 	 .pipe(gulp.dest('./build/'));
 });
