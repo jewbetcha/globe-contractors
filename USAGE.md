@@ -18,6 +18,7 @@
 7. Add your SSH key to your github account, instructions here: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-mac
 8. `$ git config --global user.name "Jon Olson"`
 9. `$ git config --global user.email "your_email@example.com"`
+10. Atom (this is what you'll use to edit the code): https://atom.io/
 
 ### Set up your workspace:
 1. Navigate to where you would like to keep the site, then `$ git clone git@github.com:themezzilla/globe-contractors.git`
