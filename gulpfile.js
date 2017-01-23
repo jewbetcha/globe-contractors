@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     path = require('path'),
     sass = require('gulp-sass'),
-    refresh = require('gulp-refresh'),
     st = require('st'),
     http = require('http'),
     server = require('gulp-server-livereload'),
@@ -22,7 +21,7 @@ var gulp = require('gulp'),
 
 // Package everything up for prod
 gulp.task('build', function() {
-	// First get rid of all the old stuff    
+	// First get rid of all the old stuff
 	del(['./build/*']);
 
 	// Then run all the things
@@ -50,12 +49,12 @@ gulp.task('copy', function() {
 gulp.task('html', function() {
 	return gulp.src(['**/*.html', '!node_modules/**/*'], {base: "./"})
 	 .pipe(htmlmin({
-		 collapseWhitespace: true 
+		 collapseWhitespace: true
 	 }))
 	 .pipe(gulp.dest('./build/'));
 });
 
-// Lint HTML 
+// Lint HTML
 gulp.task('lint', function() {
    return gulp.src('./**/*.html')
      .pipe(htmlLint())
@@ -121,4 +120,3 @@ gulp.task('watch', function() {
 //             open: true
 //         }));
 // });
-
