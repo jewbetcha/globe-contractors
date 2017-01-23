@@ -106,18 +106,19 @@ gulp.task('watch', function() {
     gulp.watch('assets/sass/*.scss', ['sass']);
 });
 
-gulp.task('server', function(done) {
-    http.createServer(
-        st({ path: __dirname, index: 'index.html', cache: false })
-    ).listen(8080, done);
-});
+// Not using these server tasks anymore
+// gulp.task('server', function(done) {
+//     http.createServer(
+//         st({ path: __dirname, index: 'index.html', cache: false })
+//     ).listen(8080, done);
+// });
 
-gulp.task('webserver', function() {
-    gulp.src('./')
-        .pipe(server({
-            livereload: true,
-            directoryListing: true,
-            open: true
-        }));
-});
+// gulp.task('webserver', function() {
+//     gulp.src('./')
+//         .pipe(server({
+//             livereload: true,
+//             directoryListing: true,
+//             open: true
+//         }));
+// });
 
