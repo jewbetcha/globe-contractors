@@ -41,7 +41,7 @@
 2. **Make changes!** NOTE: Messed up a file beyond repair? Want to start over? You can roll back to the last version that git has by doing `$ git checkout filename_you_want_to_roll_back`, or to reset the whole repository `$ git reset --hard` (use with care, all of your changes will be undone)
 3. See a summary of what has changed: `$ git status`
 4. Add all of your changes to be committed: `$ git add -A` (alternatively, you can just add single files or folders with `$ git add path/to/file`) You can run another `$ git status` here to see the files are now ready to be committed.
-5. *Commit* your changes: `$ git commit -m "message here about what your changes were"`
+5. *Commit* your changes: `$ git commit -m "[jo] message here about what your changes were"` the `[jo]` is to make it easy to see that it was you who committed, you'll notice mine are prefixed with `[cr]`
 6. Push changes to GitHub: `$ git push`
 7. OPTIONAL: Navigate to https://github.com/themezzilla/globe-contractors and see that your code is now on the internet!
 
