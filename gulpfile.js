@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     del = require('del'),
     runSequence = require('run-sequence'),
     htmlLint = require('gulp-html-lint'),
+    shell = require('gulp-shell'),
     uglify = require('gulp-uglify');
 
 // Package everything up for prod
@@ -26,6 +27,17 @@ gulp.task('build', function() {
 
 	// Then run all the things
 	runSequence('sass', 'imagemin', 'copy', 'html');
+});
+
+// Shipit command
+gulp.task('shipit', shell.task([
+  'shipit production deploy'
+]));
+
+// Deploy!
+gulp.task('deploy', function() {
+	// First build, then shipit
+	runSequence('build', 'shipit');
 });
 
 // Copy built assets to the build folder
