@@ -4,7 +4,7 @@ module.exports = function (shipit) {
 	shipit.initConfig({
 		default: {
 			workspace: '/tmp/globe-contractors',
-			deployTo: '/home/globeco',
+			deployTo: '/home/globeco/test',
 			dirToCopy: './build',
 			repositoryUrl: 'https://github.com/themezzilla/globe-contractors.git',
 			ignores: ['.git', 'node_modules'],

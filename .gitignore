@@ -4,5 +4,4 @@ node_modules/
 node_modules/*
 .bitballoon
 
-build/*
 yarn.lock
