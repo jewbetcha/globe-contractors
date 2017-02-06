@@ -10,7 +10,7 @@
 (Note: command line commands are prefixed with a `$`, you don't need to include that when copy/pasting)
 ### Install all of the things:
 1. NodeJS: https://nodejs.org/en/download/
-2. git: https://git-scm.com/download/mac
+2. git: https://git-scm.com/download/mac git is the industry standard for *version control*. Developers use this to keep track of their changes to code over time. Each time you change some code and complete a task, you'll *commit* your changes to git (steps outlined later) and they will be eternally tracked by GitHub. This is most useful for working on a project with multiple people to see what they have changed/added, and also being able to roll your changes back if something breaks and you aren't sure why.
 3. Sign up for an account on github.com, use personal email address.
 4. Brew: (paste this in command line) `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`.
 5. yarn: (also command line, you might need to restart your terminal after installing brew) `$ brew install yarn`.
