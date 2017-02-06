@@ -7,7 +7,7 @@
 * Shipit for deployment
 * repository: https://github.com/themezzilla/globe-contractors
 
-(Note: command line commands are prefixed with a `$`, you don't need to include that when copy/pasting)
+**(Note: command line commands are prefixed with a `$`, you don't need to include that when copy/pasting)**
 ### Install all of the things:
 1. NodeJS: https://nodejs.org/en/download/
 2. git: https://git-scm.com/download/mac git is the industry standard for *version control*. Developers use this to keep track of their changes to code over time. Each time you change some code and complete a task, you'll *commit* your changes to git (steps outlined later) and they will be eternally tracked by GitHub. This is most useful for working on a project with multiple people to see what they have changed/added, and also being able to roll your changes back if something breaks and you aren't sure why.
@@ -29,7 +29,7 @@
 6. `$ yarn`
 7. `$ mkdir /tmp/globe-contractors` (this is for deployment use)
 
-(All steps after this are assumed that you are in the `globe-contractors` directory in your terminal)
+**(All steps after this are assumed that you are in the `globe-contractors` directory in your terminal)**
 ### Working on the site:
 1.  `$ http-server .` (the dot at the end is important, it tells `http-server` to make the server *here*).
 2. Navigate to `http://localhost:8080` in your browser (best to use chrome) to see your local version of the site.
