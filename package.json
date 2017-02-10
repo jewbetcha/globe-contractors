@@ -4,7 +4,10 @@
   "description": "New corporate site for Globe Contractors, Inc.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently 'http-server .' 'gulp watch'",
+    "build": "gulp build",
+    "deploy": "gulp shipit",
+    "rollback": "shipit production rollback"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/themezzilla/globe-contractors#readme",
   "dependencies": {
+    "concurrently": "^3.2.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",

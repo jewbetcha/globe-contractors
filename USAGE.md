@@ -31,16 +31,15 @@
 
 **(All steps after this are assumed that you are in the `globe-contractors` directory in your terminal)**
 ### Working on the site:
-1.  `$ http-server .` (the dot at the end is important, it tells `http-server` to make the server *here*).
+1.  `yarn dev` (this starts a local server in the directory and starts the `gulp watch` command to watch for CSS changes).
 2. Navigate to `http://localhost:8080` in your browser (best to use chrome) to see your local version of the site.
 3. Change any file, then refresh the page to see your changes.
-4. If you're going to be changing CSS, open a new terminal tab and run `$ gulp watch`.
 
 ### Steps every time you make changes:
 1. **BEFORE CHANGES:** make sure you have the latest code (important) `$ git pull`.
 2. **Make changes!** NOTE: Messed up a file beyond repair? Want to start over? You can roll back to the last version that git has by doing `$ git checkout filename_you_want_to_roll_back`, or to reset the whole repository `$ git reset --hard` (use with care, all of your changes will be undone).
 3. See a summary of what has changed: `$ git status`.
-4. Compile/build the site: `$ gulp build` (this step takes all the code and squishes it down, improving performance and packaging it up for production).
+4. Compile/build the site: `$ yarn build` (this step takes all the code and squishes it down, improving performance and packaging it up for production).
 5. *Add* your changes to be committed: `$ git add -A` (alternatively, you can just add single files or folders with `$ git add path/to/file`) You can run another `$ git status` here to see the files are now ready to be committed.
 6. *Commit* your changes: `$ git commit -m "[jo] message here about what your changes were"` the `[jo]` is to make it easy to see that it was you who committed, you'll notice mine are prefixed with `[cr]`.
 7. *Push* changes to GitHub: `$ git push`.
@@ -49,9 +48,9 @@
 ### Deployment:
 1. Make sure all changes are pushed to git (AKA all steps are done in the previous section).
 2. Triple check everything works/looks the way it's supposed to. If it works/looks right locally, 99.999% chance it'll be the same on the server.
-3. Ready to go? `$ gulp deploy`
+3. Ready to go? `$ yarn deploy`
 4. Go to the site and make sure you see the changes.
-5. Site broken? Don't know why? Run `$ shipit production rollback` to go back to the previous (hopefully working) version on the server. Still broken? Call Coleman.
+5. Site broken? Don't know why? Run `$ yarn rollback` to go back to the previous (hopefully working) version on the server. Still broken? Call Coleman.
 
 ### Useful command line commands:
 * `$ ls -la` - display contents of the folder (directory) you're in
