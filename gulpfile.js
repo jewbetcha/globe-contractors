@@ -1,105 +1,113 @@
-'use strict';
+import gulp from "gulp";
+import imagemin from "gulp-imagemin";
+import gulpSass from "gulp-sass";
+import htmlmin from "gulp-html-minifier";
+import { deleteSync } from "del";
+import runSequence from "gulp4-run-sequence";
+import htmlLint from "gulp-html-lint";
+import shell from "gulp-shell";
+import uglify from "gulp-uglify";
+import autoPrefixer from "gulp-autoprefixer";
 
-var gulp = require('gulp'),
-    rename = require('gulp-rename'),
-    cssmin = require('gulp-minify-css'),
-    autoprefixer = require('gulp-autoprefixer'),
-    imagemin = require('gulp-imagemin'),
-    path = require('path'),
-    sass = require('gulp-sass'),
-    st = require('st'),
-    htmlmin = require('gulp-html-minifier'),
-    concat = require('gulp-concat'),
-    del = require('del'),
-    runSequence = require('run-sequence'),
-    htmlLint = require('gulp-html-lint'),
-    shell = require('gulp-shell'),
-    uglify = require('gulp-uglify');
+import dartSass from "sass";
+const sass = gulpSass(dartSass);
 
 // Package everything up for prod
-gulp.task('build', function() {
-	// First get rid of all the old stuff
-	del(['./build/*']);
+gulp.task("build", function (done) {
+  // First get rid of all the old stuff
+  deleteSync(["./build/*"]);
 
-	// Then run all the things
-	runSequence('sass', 'imagemin', 'copy', 'html');
+  // Then run all the things
+  runSequence("sass", "imagemin", "copy", "html");
+  done();
 });
 
 // Shipit command
-gulp.task('shipit', shell.task([
-  'shipit production deploy'
-]));
+gulp.task("shipit", shell.task(["shipit production deploy"]));
 
 // Deploy!
-gulp.task('deploy', function() {
-	// First build, then shipit
-	runSequence('build', 'shipit');
+gulp.task("deploy", function () {
+  // First build, then shipit
+  runSequence("build", "shipit");
 });
 
 // Copy built assets to the build folder
-gulp.task('copy', function() {
-	return 	gulp.src('./assets/**/*', {base:"./assets"})
-		.pipe(gulp.dest('./build/assets/'))
+gulp.task("copy", function () {
+  return gulp
+    .src("./assets/**/*", { base: "./assets" })
+    .pipe(gulp.dest("./build/assets/"));
 });
 
 // Minify HTML files
-gulp.task('html', function() {
-	return gulp.src(['**/*.html', '!node_modules/**/*'], {base: "./"})
-	 .pipe(htmlmin({
-		 collapseWhitespace: true
-	 }))
-	 .pipe(gulp.dest('./build/'));
+gulp.task("html", function () {
+  return gulp
+    .src(["**/*.html", "!node_modules/**/*"], { base: "./" })
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+      })
+    )
+    .pipe(gulp.dest("./build/"));
 });
 
 // Lint HTML
-gulp.task('lint', function() {
-   return gulp.src('./**/*.html')
-     .pipe(htmlLint())
-     .pipe(htmlLint.format())
-     .pipe(htmlLint.failOnError());
+gulp.task("lint", function () {
+  return gulp
+    .src("./**/*.html")
+    .pipe(htmlLint())
+    .pipe(htmlLint.format())
+    .pipe(htmlLint.failOnError());
 });
 
 // Prefix task by itself
-gulp.task('prefix', function() {
-    gulp.src('assets/css/styles.css')
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('assets/css/'))
+gulp.task("prefix", function () {
+  gulp
+    .src("assets/css/styles.css")
+    .pipe(
+      autoPrefixer({
+        cascade: false,
+      })
+    )
+    .pipe(gulp.dest("assets/css/"));
 });
 
 // Minify images and move to build folder
-gulp.task('imagemin', function() {
-    return gulp.src('./images/*')
-        .pipe(imagemin())
-	.pipe(gulp.dest('./build/images/'));
+gulp.task("imagemin", function () {
+  return gulp
+    .src("./images/*")
+    .pipe(imagemin())
+    .pipe(gulp.dest("./build/images/"));
 });
 
 // Compile styles
-gulp.task('sass', function() {
-    gulp.src('assets/sass/*.scss')
-        .pipe(sass({
-            outputStyle: 'compressed',
-            errLogToConsole: true
-        }))
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('assets/css/'));
+gulp.task("sass", function () {
+  return gulp
+    .src("assets/sass/*.scss")
+    .pipe(
+      sass({
+        outputStyle: "compressed",
+        errLogToConsole: true,
+      })
+    )
+    .pipe(
+      autoPrefixer({
+        cascade: false,
+      })
+    )
+    .pipe(gulp.dest("assets/css/"));
 });
 
 // Just using to compress single files
-gulp.task('compress', function() {
-	return gulp.src('./assets/js/main.js')
-		.pipe(uglify())
-		.pipe(gulp.dest('./assets/js/'));
-})
+gulp.task("compress", function () {
+  return gulp
+    .src("./assets/js/main.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("./assets/js/"));
+});
 
-gulp.task('watch', function() {
-    //livereload.listen();
-    gulp.watch('assets/sass/*.scss', ['sass']);
+gulp.task("watch", function () {
+  //livereload.listen();
+  gulp.watch("assets/sass/*.scss", ["sass"]);
 });
 
 // Not using these server tasks anymore

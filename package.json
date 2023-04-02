@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "New corporate site for Globe Contractors, Inc.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "concurrently 'http-server .' 'gulp watch'",
     "build": "gulp build",
@@ -20,27 +21,32 @@
   },
   "homepage": "https://github.com/themezzilla/globe-contractors#readme",
   "dependencies": {
-    "concurrently": "^3.2.0",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
+    "concurrently": "^8.0.1",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.1",
-    "gulp-html-lint": "0.0.1",
+    "gulp-html-lint": "^0.0.2",
     "gulp-html-minifier": "^0.1.8",
-    "gulp-imagemin": "^3.1.1",
+    "gulp-imagemin": "^8.0.0",
     "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-shell": "^0.5.2",
-    "gulp-uglify": "^2.0.0",
-    "run-sequence": "^1.2.2",
-    "shipit-cli": "^2.0.0",
-    "shipit-deploy": "^2.4.0",
-    "st": "^1.2.0"
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-shell": "^0.8.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp4-run-sequence": "^1.0.0",
+    "shipit-cli": "^5.3.0",
+    "shipit-deploy": "^5.3.0",
+    "st": "^3.0.0"
   },
   "devDependencies": {
     "gulp-compass": "^2.1.0",
-    "gulp-livereload": "^3.8.1"
-  }
+    "gulp-livereload": "^4.0.2",
+    "sass": "^1.60.0",
+    "yarn-upgrade-all": "^0.7.2"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ]
 }
